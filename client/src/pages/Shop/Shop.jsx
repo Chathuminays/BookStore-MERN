@@ -26,15 +26,15 @@ export default function Shop() {
         <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8'>
           {
             books.map(book => <Card>
-              <img src={book.book_image} alt="" className='h-96' />
+              <img src={book.image} alt="" className='h-96' />
               <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                 <p>
-                  {book.bookname}
+                  {book.title}
                 </p>
               </h5>
               <p className="font-normal text-gray-700 dark:text-gray-400">
                 <p>
-                  {book.book_description}
+                  {book.description}
                 </p>
               </p>
 

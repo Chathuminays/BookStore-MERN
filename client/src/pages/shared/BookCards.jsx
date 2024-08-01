@@ -48,24 +48,24 @@ const BookCards = ({headline, books}) => {
                 >
                     {
                         books.map(book => <SwiperSlide className='text-center flex items-center justify-center' key={book._id}>
-                            <Link to={`/book/${book._id}`} className='cursor-pointer'>
-                                <div className='bg-gray-100 p-8 rounded-lg relative'>
-                                    <img src={book.image} alt="" className='w-full' />
-                                    <div className='absolute top-3 right-3 bg-blue-700 hover:bg-black p-2 rounded '>
-                                        <FaCartShopping className='w-4 h-4 text-white'/>
-                                    </div>
+                            
+                            <div className='bg-gray-100 p-8 rounded-lg relative'>
+                                <img src={book.image} alt="" className='w-full' />
+                                <div className='absolute top-3 right-3 bg-blue-700 hover:bg-black p-2 rounded '>
+                                    <FaCartShopping className='w-4 h-4 text-white'/>
                                 </div>
+                            </div>
 
-                                <div className='mt-5 mb-8 text-left space-y-2 flex justify-between items-start'>
-                                    <div>
-                                        <h3 className='text-black font-semibold'>{book.title}</h3>
-                                        <p>{book.author}</p>
-                                    </div>
-                                    <div>
-                                        <p className='font-bold text-blue-700'>{book.price}</p>
-                                    </div>
+                            <div className='mt-5 mb-8 text-left space-y-2 flex justify-between items-start'>
+                                <div>
+                                    <h3 className='text-black font-semibold'>{book.title}</h3>
+                                    <p>{book.author}</p>
                                 </div>
-                            </Link>
+                                <div>
+                                    <p className='font-bold text-blue-700'>{book.price}</p>
+                                </div>
+                            </div>
+                           
                         </SwiperSlide>)
                     }
 

@@ -67,16 +67,16 @@ const ManageBooks = () => {
                                 {index + 1}
                             </Table.Cell>
                             <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                                {book.bookTitle}
+                                {book.title}
                             </Table.Cell>
                             <Table.Cell>
-                                {book.authorName}
+                                {book.author}
                             </Table.Cell>
                             <Table.Cell>
                                 {book.category}
                             </Table.Cell>
                             <Table.Cell>
-                                $10.99
+                                {book.price}
                             </Table.Cell>
                             <Table.Cell>
                                 <Link

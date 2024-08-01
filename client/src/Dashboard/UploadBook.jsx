@@ -39,20 +39,20 @@ const UploadBook = () => {
     event.preventDefault();
     const form = event.target;
 
-    const bookTitle = form.bookTitle.value;
-    const authorName = form.authorName.value;
-    const imageURL = form.imageURL.value;
+    const title = form.bookTitle.value;
+    const author = form.authorName.value;
+    const image = form.imageURL.value;
     const category = form.categoryName.value;
-    const bookDescription = form.bookDescription.value;
-    const bookPDFURL = form.bookPDFURL.value;
+    const description = form.bookDescription.value;
+    const price = form.bookPDFURL.value;
 
     const bookObj = {
-      bookTitle,
-      authorName,
-      imageURL,
+      title,
+      author,
+      image,
       category,
-      bookDescription,
-      bookPDFURL,
+      description,
+      price,
     };
     // console.log(dataObj)
     fetch("http://localhost:5000/upload-book", {
@@ -189,12 +189,12 @@ const UploadBook = () => {
           <div className="mb-2 block">
             <Label
               htmlFor="bookPDFURL"
-              value="Book PDF Link"
+              value="Book Price"
             />
           </div>
           <TextInput
             id="bookPDFURL"
-            placeholder="Paste Book PDF URL here"
+            placeholder="Book Price"
             required
             type="text"
             name='bookPDFURL'

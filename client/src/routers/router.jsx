@@ -13,7 +13,6 @@ import EditBooks from "../Dashboard/EditBooks";
 import Signup from "../pages/Signup";
 import Logout from "../pages/Logout";
 import ErrorPage from "../pages/shared/ErrorPage";
-import About from "../pages/about/About";
 import Blog from "../pages/blog/Blog";
 
 const router = createBrowserRouter([
@@ -34,10 +33,6 @@ const router = createBrowserRouter([
         path: "/book/:id",
         element: <SignleBook />,
         loader: ({ params }) => fetch(`http://localhost:5000/book/${params.id}`)
-      },
-      {
-        path: "/about",
-        element: <About/>
       },
       {
         path: "/blog",
